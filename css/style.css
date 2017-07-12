@@ -1,0 +1,92 @@
+/*
+Please put the custom styles here.
+*/
+
+#baraban {
+	display: none;
+}
+
+.spinleft {
+	-webkit-animation: rotatel 360s;
+}
+
+#baraban_img {
+	width: 100%;
+}
+
+#spinner {
+	display: none;
+}
+
+#kb_popup {
+	display: none;
+	background-color: #202020;
+	color: #eeeeee;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+}
+
+#dialog {
+	display: none;
+	background-color: #202020;
+	color: #eeeeee;
+	opacity: 0.75;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 33%;
+	width: 100%;
+}
+
+#dialog_filler {
+	-webkit-filter: blur(5px); /* Safari */
+    filter: blur(5px);
+	background-color: #202020;
+    opacity: 0.3;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 77%;
+}
+
+#dialog_separator {
+	background-color: #eeeeee;
+	width: 100%;
+	left: 0;
+	height: 1px;
+}
+
+#keyboard {
+	display: -webkit-flex;
+	-webkit-flex-wrap: wrap;
+	-webkit-justify-content: center;
+}
+
+.kb_btn {
+	width: 3em;
+	height: 3em;
+	margin: 2px;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+#dialog_blinker {
+  animation: blink 1s step-start 0s infinite;
+  -webkit-animation: blink 1s step-start 0s infinite;
+}
+
+@-webkit-keyframes rotatel {
+  0% { -webkit-transform: rotate(0deg);}
+  100% { -webkit-transform: rotate(-99999deg);}
+  
+}
