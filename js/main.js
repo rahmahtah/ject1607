@@ -266,7 +266,11 @@ function next_stage(st) {
 		}
 		$("#bukva_text").text(slovo_buffer);
 		draw_baraban(function() {
-			setTimeout(function(){ next_stage(game_stage); }, 2000);
+			setTimeout(function(){ 
+				next_stage(game_stage); 
+				$("#baraban_img").removeClass("spinleft");
+			}, 2000);
+			$("#baraban_img").off("click");
 		});
 		game_stage = 3;
 	} else if (st === 3) { // set show
@@ -349,8 +353,8 @@ function draw_baraban(cb) {
 	$("#baraban").show();
 	$("#baraban_img").on("click", function() {
 		$(this).addClass("spinleft");
+		cb();
 	});
-	cb();
 }
 
 
